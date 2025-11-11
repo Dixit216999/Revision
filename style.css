@@ -334,3 +334,38 @@ header {
     width: 65%;
   }
 }
+
+/* ===== Scroll Animation ===== */
+section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Theme Toggle Button ===== */
+#theme-toggle {
+  background: none;
+  border: none;
+  color: var(--heading-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: transform 0.3s ease;
+}
+
+#theme-toggle:hover {
+  transform: rotate(20deg);
+}
+
+/* ===== Light Mode ===== */
+body.light-mode {
+  --bg-color: #f9fafb;
+  --card-bg: #e2e8f0;
+  --text-color: #1e293b;
+  --heading-color: #111827;
+}
